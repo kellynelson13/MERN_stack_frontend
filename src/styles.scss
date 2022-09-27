@@ -1,0 +1,33 @@
+// --------------------------
+// VARIABLES
+// --------------------------
+$maincolor: black;
+$contrastcolor: white;
+
+@mixin white-text-black-bg {
+    color: $contrastcolor;
+    background-color: $maincolor;
+}
+
+@mixin black-text-white-bg {
+    color: $maincolor;
+    background-color: $contrastcolor;
+}
+
+// --------------------------
+// Header
+// --------------------------
+nav {
+    @include white-text-black-bg;  //this says hi I want to include a block of css that was defined above
+    display: flex;
+    justify-content: flex-start;
+
+    a {
+        @include white-text-black-bg;
+    
+        div {
+          margin: 10px;
+          font-size: large;
+        }
+      }
+    }
